@@ -189,34 +189,8 @@ Below are the [JSON schemas](https://json-schema.org/specification) for each sup
 
 All POST requests containing data to be imported are wrapped in a top-level `GenericPayload` wrapper.
 
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
-  "properties": {
-    "apiVersion": {
-      "type": "string"
-    },
-    "payload": {
-      "type": "object",
-      "description": "The inner payload, which contains data from one of the described data verticals"
-    },
-    "schemaSource": {
-      "type": "string",
-      "description": "The source file containing the schema definition"
-    },
-    "@type": {
-      "const": "GenericPayload"
-    }
-  },
-  "required": [
-    "@type",
-    "schemaSource",
-    "apiVersion",
-    "payload"
-  ]
-}
-```
+{::include payload-schema.json}
+
 
 ### MEDIA
 
